@@ -1,0 +1,72 @@
+@import "./variables";
+
+.main-container-login {
+  background-color: $main-background;
+}
+
+.logo-compony {
+  width: 6vw;
+}
+.text-logo-company {
+  color: white;
+}
+.login-content {
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  // transform: (-50%, -50%);
+}
+.icon-user {
+  width: 15vw;
+}
+
+.input-login {
+  border-radius: 0.6vw;
+  width: 30vw;
+  height: 4vh;
+  border: none;
+  padding-left: 0.5vw;
+  font-style: italic;
+  font-size: 1vw;
+}
+.text-user-logo {
+  color: #84512d;
+  font-size: 1.5vw;
+}
+.button-login-login {
+  border-radius: 0.6vw;
+  width: 20vw;
+  height: 5vh;
+  border: none;
+  color: white;
+  background-color: #566573;
+  text-align: center;
+  font-size: 1vw;
+
+  &:hover {
+    color: $main-background;
+  }
+}
+
+.button-login-create {
+  border-radius: 0.6vw;
+  border: #566573 solid 0.1vw;
+  width: 20vw;
+  height: 5vh;
+  color: white;
+  background: none;
+  text-align: center;
+  font-size: 1vw;
+
+  &:hover {
+    color: #566573;
+  }
+}
+.forget-pass {
+  font-size: calc(0.2vw + 0.2vh + 1vmin);
+  text-decoration: none;
+  font-style: italic;
+}
+#input-login-upper {
+  text-transform: uppercase;
+}

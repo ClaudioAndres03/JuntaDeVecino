@@ -1,0 +1,87 @@
+.main-container-login {
+  background-color: #212529;
+}
+
+.logo-compony {
+  width: 7vw;
+}
+
+.text-logo-company {
+  color: white;
+}
+
+.icon-user {
+  width: 20vw;
+}
+
+.input-login {
+  border-radius: 6px;
+  width: 40vw;
+  height: 6vh;
+  border: none;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+.text-user-logo {
+  color: #84512d;
+}
+
+.button-login-login {
+  border-radius: 6px;
+  width: 25vw;
+  height: 7vh;
+  border: none;
+  color: white;
+  background-color: #566573;
+  text-align: center;
+}
+
+.button-login-login:hover {
+  color: #212529;
+}
+
+.button-login-create {
+  border-radius: 6px;
+  border: #566573 solid 1px;
+  width: 25vw;
+  height: 7vh;
+  color: white;
+  background: none;
+  text-align: center;
+}
+
+.button-login-create:hover {
+  color: #566573;
+}
+
+.forget-pass {
+  font-size: 10px;
+  text-decoration: none;
+  font-style: italic;
+}
+
+#input-login-upper {
+  text-transform: uppercase;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+#root {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=App.css.map */
