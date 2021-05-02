@@ -7,6 +7,7 @@
   "main": "../frontend/public/electron.js",
   "homepage": "./",
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -17,6 +18,7 @@
     "jsonwebtoken": "^8.5.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
     "react-loader-spinner": "^4.0.0",
     "react-router-dom": "^5.2.0",

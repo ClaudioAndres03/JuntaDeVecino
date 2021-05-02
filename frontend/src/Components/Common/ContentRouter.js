@@ -1,10 +1,12 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import Alert from "../Common/Alert"
-import Login from "../Login"
-import MainMenu from '../MainMenu'
-import NoFound from "../Common/NoFound"
-
+import Alert from "../Common/Alert";
+import Login from "../Login";
+import MainMenu from '../MainMenu';
+import NoFound from "../Common/NoFound";
+import PaySecurity from '../PaySecurity';
+import PayRFID from '../PayRFID';
+import Reports from '../Reports';
 
 
 const ContentRouter = () => {
@@ -17,6 +19,15 @@ const ContentRouter = () => {
                 </Route>
                 <Route exact path="/main-menu">
                     <MainMenu />
+                </Route>
+                <Route exact path="/pay-security">
+                    <PaySecurity />
+                </Route>
+                <Route exact path="/pay-rfid">
+                    <PayRFID />
+                </Route>
+                <Route exact path="/reports">
+                    <Reports />
                 </Route>
                 <Route>
                     <Alert/>

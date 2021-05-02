@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import GlobalContext from "../../Context/GlobalContext"
+import GlobalContext from "../Common/GlobalContext"
 import { Redirect } from "react-router-dom";
 
 const ContextMiddleware = (props) => {
@@ -7,7 +7,9 @@ const ContextMiddleware = (props) => {
         isAuth: false,
         token: "",
         isLoading: false,
-        showAlert: false
+        showAlert: false,
+        navTitle: "MAIN MENU",
+        fullName:""
     });
 
     const getLocalCache = () => {
@@ -43,7 +45,7 @@ const ContextMiddleware = (props) => {
             localContext = Object.assign(
                 {},
                 { ...localContext },
-                { token: "", isAuth: false }
+                { token: "", isAuth: false,navTitle: "MAIN MENU",fullName:"" }
             );
             setLocalCache(localContext);
         };
@@ -66,7 +68,26 @@ const ContextMiddleware = (props) => {
                 return < Redirect to="/" />
             };
 
-        return { logOut, logIn, getToken, routeProtectedComponent, getTokenClaims};
+        const changeNavTitle = (newTitle) =>{
+            localContext = Object.assign(
+                {},
+                { ...localContext },
+                {  navTitle: newTitle }
+            );
+            setLocalCache(localContext);
+        };
+
+
+           const newFullName = (fullName) =>{
+            localContext = Object.assign(
+                {},
+                { ...localContext },
+                {  fullName: fullName }
+            );
+            setLocalCache(localContext);
+        };
+
+        return { logOut, logIn, getToken, routeProtectedComponent, getTokenClaims, changeNavTitle, newFullName};
     };
 
     return (

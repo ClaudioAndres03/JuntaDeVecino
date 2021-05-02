@@ -1,0 +1,53 @@
+@import "variables";
+
+.securtiy-container-search {
+  height: 25vh;
+  background-color: #353a3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: #52b7be solid 0.1vw;
+  border-radius: 0.6vw;
+}
+.input-search {
+  border-radius: 0.6vw;
+  width: 25vw;
+  height: 4vh;
+  border: none;
+  padding-left: 0.5vw;
+  font-style: italic;
+  font-size: 1vw;
+}
+.button-search {
+  border-radius: 0.6vw;
+  width: 15vw;
+  height: 5vh;
+  border: none;
+  color: white;
+  background-color: #566573;
+  text-align: center;
+  font-size: 1vw;
+
+  &:hover {
+    color: $main-background;
+  }
+}
+
+.txt-information-sub {
+  font-size: 1.3vw;
+  line-height: 5vh;
+  font-weight: bold;
+  color: #566573;
+}
+.txt-information-value {
+  font-size: 1.2vw;
+  line-height: 5vh;
+  color: white;
+}
+
+.title-search {
+  font-size: 1.2vw;
+  color: #52b7be;
+  font-weight: bold;
+}

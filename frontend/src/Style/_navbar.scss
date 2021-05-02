@@ -1,0 +1,36 @@
+@import "./variables";
+
+.nav-user-panel {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center !important;
+}
+
+.nav-logout {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.nav-logout-img {
+  width: 2vw;
+}
+.nav-logout-txt {
+  font-size: 1vw;
+  color: white;
+}
+
+.dropdown-active {
+  display: block;
+  background-color: #353a3f;
+}
+
+.nav-title {
+  color: #6be5ef;
+  font-size: 1.5vw;
+  font-family: "Arial Black", sans-serif;
+  letter-spacing: -1px;
+  padding-right: 2vw;
+}
+.dropdown-item {
+  color: white;
+}

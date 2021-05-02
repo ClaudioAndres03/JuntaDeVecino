@@ -81,7 +81,6 @@ const authorization = require("../middleware/authorization")
     }
  });
 
-
 router.get("/verify", authorization, async (req, res) => {
     try {
         res.json(true);
@@ -91,6 +90,24 @@ router.get("/verify", authorization, async (req, res) => {
     }
 
 });
+
+//   obterner el nombre de usuario
+ router.post("/fullname", async (req, res) => {
+   
+    try {
+        
+        const {username} = req.body;
+
+        const fullname = await pool.query("SELECT fullname FROM jdvusers WHERE username = $1",[username]);
+        const profile = fullname.rows[0].fullname;
+        res.json({profile})
+
+    } catch (error) {
+        console.error(err.message);
+        res.status(500).send("server error");   
+    }
+ });
+
 
 
 module.exports = router;
