@@ -7,7 +7,7 @@ const authorization = require("../middleware/authorization")
 
 
 //RESGISTERING
- router.post("/register", validInfo, async (req, res) => {
+ router.post('/register', validInfo, async (req, res) => {
      try {
             //1. destructure the req.body (name, email,Password)
             const {username,email, password } = req.body;
@@ -48,7 +48,7 @@ const authorization = require("../middleware/authorization")
  })
 
  //LOGIN
- router.post("/login",  async (req, res) => {
+ router.post('/login',  async (req, res) => {
      
     try {
 
@@ -81,7 +81,7 @@ const authorization = require("../middleware/authorization")
     }
  });
 
-router.get("/verify", authorization, async (req, res) => {
+router.get('/verify', authorization, async (req, res) => {
     try {
         res.json(true);
     } catch (err) {
@@ -92,7 +92,7 @@ router.get("/verify", authorization, async (req, res) => {
 });
 
 //   obterner el nombre de usuario
- router.post("/fullname", async (req, res) => {
+ router.post('/fullname', async (req, res) => {
    
     try {
         
@@ -107,7 +107,6 @@ router.get("/verify", authorization, async (req, res) => {
         res.status(500).send("server error");   
     }
  });
-
 
 
 module.exports = router;

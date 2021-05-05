@@ -1,20 +1,48 @@
 @import "./variables";
 
 .datagrid-container {
-  background-color: #353a3f;
+  // background-color: #353a3f;
   border-radius: 0.6vw;
   height: 50vh;
-  border: #52b7be solid 0.1vw;
-  tr {
-  }
-  th {
-    width: 15vw;
-  }
+  width: 93.7vw;
+  margin-left: 0.8vw;
+  padding: 0;
+  border: #566573 solid 0.1vw;
+  text-align: center;
 }
-
-.datagrid-table {
+.datagrid-head {
   font-size: 1.3vw;
   line-height: 5vh;
   font-weight: bold;
-  color: #566573;
+  color: #ffc75f;
+  border-bottom: #566573 solid 0.1vw;
+  th {
+    width: 15vw;
+  }
+  #num-head {
+    width: 5vw;
+  }
+}
+.datagrid-body {
+  font-size: 1.3vw;
+  line-height: 5vh;
+  color: white;
+  background: inherit;
+  td {
+    width: 15vw;
+  }
+  #num-body {
+    width: 5vw;
+  }
+  #txt-comment {
+    width: 18vw;
+    font-style: italic;
+    color: lightslategray;
+    font-size: 1vw;
+    cursor: pointer;
+  }
+  button {
+    height: 4vh;
+    width: 6vw;
+  }
 }

@@ -2,12 +2,11 @@
 
 .securtiy-container-search {
   height: 25vh;
-  background-color: #353a3f;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: #52b7be solid 0.1vw;
+  border: #566573 solid 0.1vw;
   border-radius: 0.6vw;
 }
 .input-search {
@@ -38,12 +37,14 @@
   font-size: 1.3vw;
   line-height: 5vh;
   font-weight: bold;
-  color: #566573;
+  color: #ffc75f;
+  text-align: start;
 }
 .txt-information-value {
   font-size: 1.2vw;
   line-height: 5vh;
   color: white;
+  text-align: start;
 }
 
 .title-search {

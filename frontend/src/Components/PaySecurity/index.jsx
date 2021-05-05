@@ -1,7 +1,32 @@
-import React from 'react';
-import DataGrip from '../Common/DataGrid'
+import React, { useState, useEffect } from 'react';
+import DataGrip from '../Common/DataGrid';
+import getResidents from '../../Api/api-paysecurity'
 
 const Index = () => {
+
+    const [inputSearch, setInputSearch] = useState("");
+    const [listNames, setListNames] = useState("");
+    const [data, setData] = useState([]);
+
+    const klk = () => {
+        getResidents()
+            .then(resp => {
+                return resp.json()
+
+            })
+            .then(resp => {
+                // setData(resp)
+
+                const listResidents = resp.map(function (fullname) {
+                    return fullname.fullname
+                })
+                console.log(listResidents)
+
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+    }
 
     return (
         <div className='main-container-login w100 h100' id="root">
@@ -16,6 +41,7 @@ const Index = () => {
                             className="input-search"
                             type="text"
                             placeholder="Name"
+                            onChange={e => setInputSearch(e.target.value)}
                         />
                     </div>
 
@@ -28,7 +54,7 @@ const Index = () => {
                     </div>
 
                     <div className="p-1 justify-content-center row">
-                        <button className="btn button-search" type="button" >Search</button>
+                        <button className="btn button-search" type="button" onClick={() => klk()} >Search</button>
                     </div>
 
                 </div>
@@ -36,7 +62,7 @@ const Index = () => {
                 <div className="col-7 pt-3 p-1 securtiy-container-search">
                     <p className="m-0 title-search">Information</p>
                     <div className="col-12 d-flex aling-items-center p-1">
-                        <div className="col-3 p-1 flex-column d-flex justify-content-center aling-items-center">
+                        <div className="col-3 pl-4 flex-column d-flex justify-content-center aling-items-center">
                             <p className="m-0 txt-information-sub">Full Name:</p>
                             <p className="m-0 txt-information-sub">Documente ID:</p>
                             <p className="m-0 txt-information-sub">Phone Number:</p>
@@ -46,7 +72,7 @@ const Index = () => {
                             <p className="m-0 txt-information-value">029873638238</p>
                             <p className="m-0 txt-information-value">829-837-3873</p>
                         </div>
-                        <div className="col-3 p-1 flex-column d-flex justify-content-center aling-items-center">
+                        <div className="col-3 pl-4 flex-column d-flex justify-content-center aling-items-center">
                             <p className="m-0 txt-information-sub">Email:</p>
                             <p className="m-0 txt-information-sub">Street Name:</p>
                             <p className="m-0 txt-information-sub">House Number:</p>
@@ -59,7 +85,7 @@ const Index = () => {
                     </div>
                 </div>
 
-                <div className="col-12">
+                <div className="col-12 align-self-start">
                     <DataGrip />
                 </div>
 

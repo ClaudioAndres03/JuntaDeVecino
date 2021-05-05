@@ -17,7 +17,7 @@ app.use(cors());
 
 //register and login routes
 app.use("/auth", require("./routes/jwtAuth.routes"));
-
+app.use("/paysecurity",require("./routes/paySecurity.routes"));
 
 
 
